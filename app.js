@@ -9,7 +9,7 @@ var session = require('express-session');
 // Route includes
 //var index = require('./routes/index');
 var user = require('./routes/user');
-//var register = require('./routes/register');
+var edit = require('./routes/edit');
 
 
 app.use(bodyParser.json());
@@ -31,7 +31,7 @@ app.use(passport.session());
 
 // Routes
 app.use('/user', user);
-
+app.use('/edit', edit);
 
 // Serve back static files
 app.use(express.static('public'));

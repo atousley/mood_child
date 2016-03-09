@@ -1,6 +1,9 @@
-myApp.controller('EditController', ['$scope', '$http', function($scope, $http) {
+myApp.controller('EditController', ['$scope', 'DataFactory', '$http', function($scope, DataFactory, $http) {
 
-    console.log('edit controller hooked up');
+    //console.log('edit controller hooked up');
+
+    $scope.dataFactory = DataFactory;
+
 
     $scope.saveVision = function() {
         console.log('save function firing')
@@ -10,7 +13,7 @@ myApp.controller('EditController', ['$scope', '$http', function($scope, $http) {
             author: $scope.author
         };
 
-        $http.post('/current_book', current_book).then(function(response) {
+        $http.post('/edit', current_book).then(function(response) {
             console.log('posted this book', response);
         });
     }

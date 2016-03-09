@@ -9,14 +9,16 @@
     <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
 
     <script type="text/javascript" src="/assets/scripts/app.js"></script>
-    <!--<script type="text/javascript" src="/assets/scripts/controllers/editController.js"></script>-->
-    <script type="text/javascript" src="/assets/scripts/controllers/currentBookController.js"></script>
+    <script type="text/javascript" src="/assets/scripts/factories/dataFactory.js"></script>
+
+    <script type="text/javascript" src="/assets/scripts/controllers/editController.js"></script>
+    <!--<script type="text/javascript" src="/assets/scripts/controllers/currentBookController.js"></script>-->
 
 </head>
 <body ng-app="myApp">
     <div ng-controller="UserController">
         <header ng-include="'/views/templates/nav.html'"></header>
-        <h1>Moon Child</h1>
+        <h1>Moon Child, {{user}}</h1>
         <main ng-view></main>
     </div>
 </body>

@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 mongoose.model(
-    'Current_Book',
+    'Vision',
     new Schema({
             "title": String,
             "author": String
@@ -14,20 +14,20 @@ mongoose.model(
         }
     ));
 
-var Current_Book = mongoose.model('Current_Book');
+var vision = mongoose.model('Vision');
 
 router.post('/', function(req, res) {
-    var newCurrentBook = new Current_Book ({
+    var newVision = new vision ({
         "title": req.body.title,
         "author": req.body.author
     });
 
-    newCurrentBook.save(function(err, data) {
+    newVision.save(function(err, data) {
         if(err) {
             console.log('ERR: ', err);
         }
 
-        Current_Book.find({}, function(err, data) {
+        vision.find({}, function(err, data) {
             if(err) {
                 console.log('ERR: ', err);
             }

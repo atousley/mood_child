@@ -3,7 +3,8 @@ myApp.controller('CurrentBook', ['$scope', '$http', function($scope, $http) {
     console.log('currentBook controller hooked up');
 
     $scope.saveVision = function() {
-        console.log('save function firing')
+        //console.log('save function firing')
+        console.log('post to this user', $scope._id);
 
         var current_book = {
             title: $scope.title,
