@@ -1,4 +1,24 @@
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ngRoute']);
+
+myApp.config(['$routeProvider', function($routeProvider) {
+
+    $routeProvider
+        .when('/board', {
+            templateUrl: '/views/templates/board.html',
+            //controller: ''
+        })
+        .when('/edit', {
+            templateUrl: '/views/templates/edit.html',
+            //controller: 'EditController'
+        })
+        .when('/archive', {
+            templateUrl: '/views/templates/archive.html',
+            //controller: ''
+        })
+        .otherwise({
+            redirectTo: 'board'
+        });
+}]);
 
 myApp.controller('UserController', ['$scope', '$http', '$window', function($scope, $http, $window) {
     $scope.userName;
