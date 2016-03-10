@@ -6,16 +6,21 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', function($
 
 
     $scope.saveVision = function() {
-        console.log('save function firing')
+        console.log('save function firing', id);
 
-        var current_book = {
+        $scope.dataFactory = DataFactory;
+
+        var vision = {
+            id: id,
             title: $scope.title,
             author: $scope.author
         };
 
-        $http.post('/edit', current_book).then(function(response) {
-            console.log('posted this book', response);
-        });
+        $scope.dataFactory.sendVision(vision);
+        //.then(function() {
+        //    $scope.user = $scope.dataFactory.userInfo();
+        //    console.log($scope.user);
+
     }
 
 }]);

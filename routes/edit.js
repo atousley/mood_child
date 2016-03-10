@@ -1,42 +1,34 @@
 var express = require('express');
 var router = express.Router();
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+//var mongoose = require('mongoose');
+var User = require('../models/user');
+var Vision = require('../models/visionBoard');
 
-mongoose.model(
-    'Vision',
-    new Schema({
-            "title": String,
-            "author": String
-        },
-        {
-            collection: 'vision'
+
+router.post('/:id', function(req, res) {
+    console.log(req.body);
+    var newVision = new Vision({
+        "current_book": {
+            "title": req.body.title,
+            "author": req.body.author
         }
-    ));
 
-var vision = mongoose.model('Vision');
-
-router.post('/', function(req, res) {
-    var newVision = new vision ({
-        "title": req.body.title,
-        "author": req.body.author
     });
+    console.log(newVision);
 
-    newVision.save(function(err, data) {
-        if(err) {
-            console.log('ERR: ', err);
-        }
+    User.findById(req.params.id, function (err, result) {
 
-        vision.find({}, function(err, data) {
-            if(err) {
-                console.log('ERR: ', err);
-            }
 
-            res.send(data);
+        console.log('RESULT', result);
+
+        result.visionboard.push(newVision);
+
+        result.save(function(err, result){
+            console.log('an error happened and nothing worked :)');
         });
+
     });
+
 
 });
-
-
 module.exports = router;

@@ -2,18 +2,20 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt');
 var SALT_WORK_FACTOR = 10;
+var visionSchema = require('../models/visionBoard').schema;
 
 // Mongoose Schema
 var UserSchema = new Schema({
     username: {type: String, required: true, index: {unique: true}},
-    password: {type: String, required: true}
+    password: {type: String, required: true},
+    visionboard: [visionSchema]
 });
 
 // Called before adding a new user to the DB. Encrypts password.
 UserSchema.pre('save', function(next) {
     var user = this;
 
-    if(!user.isModified('password')) return next;
+    if(!user.isModified('password')) return next();
 
     bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt) {
         if(err) return next(err);

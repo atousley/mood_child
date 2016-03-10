@@ -1,18 +1,22 @@
 myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
 
     var userData = undefined;
-    //
-    //var postFavorite = function(data) {
-    //    $http.post('/data', data).then(function(response) {
-    //    });
-    //};
-    //
+    //var id = undefined;
+
+    var postVision = function(data) {
+        console.log('sending to post', data);
+        $http.post('/edit/' + id, data).then(function(response) {
+            console.log('posted this vision', response);
+        });
+    };
+
     var getUser = function() {
         var promise = $http.get('/user').then(function(response) {
             if(response.data) {
                 console.log(response.data);
                 userData = response.data.username;
-                console.log('User Data: ', userData);
+                id = response.data._id;
+                console.log('User Data: ', userData, id);
             } else {
                 $window.location.href = '/index.html';
             }
@@ -27,20 +31,11 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
         retrieveUser: function() {
             return getUser();
         },
-        //addFavorite: function(animal, breed, photo, name, age, sex, description, city, state) {
-        //    var favorite = {};
-        //    favorite.animal = animal;
-        //    favorite.breed = breed;
-        //    favorite.photo = photo;
-        //    favorite.name = name;
-        //    favorite.age = age;
-        //    favorite.sex = sex;
-        //    favorite.description = description;
-        //    favorite.city = city;
-        //    favorite.state = state;
-        //
-        //    postFavorite(favorite);
-        //}
+        sendVision: function(vision) {
+            //console.log('vision in factory', vision);
+
+            postVision(vision);
+        }
 
     };
     return publicApi;
