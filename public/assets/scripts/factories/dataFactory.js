@@ -4,19 +4,21 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
     //var id = undefined;
 
     var postVision = function(data) {
-        console.log('sending to post', data);
+        //console.log('sending to post', data);
         $http.post('/edit/' + id, data).then(function(response) {
-            console.log('posted this vision', response);
+            //console.log('posted this vision', response);
         });
     };
 
     var getUser = function() {
         var promise = $http.get('/user').then(function(response) {
             if(response.data) {
-                console.log(response.data);
-                userData = response.data.username;
+                //console.log(response.data);
+                userData = response.data;
+                //userName = response.data.username;
                 id = response.data._id;
-                console.log('User Data: ', userData, id);
+                //vision = response.data.visionboard;
+                //console.log('User Data: ', userData, id);
             } else {
                 $window.location.href = '/index.html';
             }

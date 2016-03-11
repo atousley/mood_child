@@ -5,7 +5,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider
         .when('/board', {
             templateUrl: '/views/templates/board.html',
-            //controller: ''
+            controller: 'BoardController'
         })
         .when('/edit', {
             templateUrl: '/views/templates/edit.html',
@@ -26,8 +26,8 @@ myApp.controller('UserController', ['$scope', 'DataFactory', '$http', '$window',
     $scope.dataFactory = DataFactory;
 
     $scope.dataFactory.retrieveUser().then(function() {
-        $scope.user = $scope.dataFactory.userInfo();
-        console.log($scope.user);
+        $scope.user = $scope.dataFactory.userInfo().username;
+        //console.log($scope.user);
     });
 
 }]);

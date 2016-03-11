@@ -6,7 +6,7 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', function($
 
 
     $scope.saveVision = function() {
-        console.log('save function firing', id);
+        //console.log('save function firing', id);
 
         $scope.dataFactory = DataFactory;
 
