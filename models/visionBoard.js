@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var visionSchema = new Schema({
+    "date": Date,
     "current_book": {
         "title": String,
         "author": String

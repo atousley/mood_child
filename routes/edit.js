@@ -8,6 +8,7 @@ var Vision = require('../models/visionBoard');
 router.post('/:id', function(req, res) {
     console.log(req.body);
     var newVision = new Vision({
+        "date": Date(),
         "current_book": {
             "title": req.body.title,
             "author": req.body.author
