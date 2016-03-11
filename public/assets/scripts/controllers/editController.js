@@ -23,7 +23,15 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', function($
             title4: $scope.title4,
             author4: $scope.author4,
             title5: $scope.title5,
-            author5: $scope.author5
+            author5: $scope.author5,
+            delight1: $scope.delight1,
+            delight2: $scope.delight2,
+            delight3: $scope.delight3,
+            delight4: $scope.delight4,
+            delight5: $scope.delight5,
+            delight6: $scope.delight6,
+            delight7: $scope.delight7,
+            delight8: $scope.delight8
         };
 
         $scope.dataFactory.sendVision(vision);

@@ -17,6 +17,8 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function(
 
         $scope.readingList = $scope.visions.reading_list;
 
+        $scope.delights = $scope.visions.delight;
+
     });
 
 }]);

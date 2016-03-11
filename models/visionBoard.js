@@ -8,7 +8,10 @@ var visionSchema = new Schema({
         "author": String
     },
     "reading_list": [
-        {"title1": String, "author1": String}
+        {"title": String, "author": String}
+    ],
+    "delight": [
+        {"delight": String}
     ]
 });
 
