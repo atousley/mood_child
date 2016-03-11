@@ -6,14 +6,16 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function(
         $scope.userData = $scope.dataFactory.userInfo();
         //console.log($scope.userData);
 
-        $scope.vision = $scope.userData.visionboard;
+        $scope.visionboard = $scope.userData.visionboard;
         //console.log($scope.vision);
 
-        $scope.currentVision = $scope.vision.length - 1;
+        $scope.currentVision = $scope.visionboard.length - 1;
         //console.log($scope.currentVision);
 
-        $scope.visions = $scope.vision[$scope.currentVision];
-        //console.log($scope.visions);
+        $scope.visions = $scope.visionboard[$scope.currentVision];
+        //console.log($scope.visions.reading_list);
+
+        $scope.readingList = $scope.visions.reading_list;
 
     });
 

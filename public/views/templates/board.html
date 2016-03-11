@@ -1,9 +1,11 @@
 <h1>~my vision board~</h1>
 
 
-<div ng-repeat="vision in visions">
-    <div class="current_book">
+<div class="current_book" ng-repeat="vision in visions">
         <p>{{vision.title}}</p>
         <p>{{vision.author}}</p>
-    </div>
+</div>
+
+<div class="reading_list" ng-repeat="book in readingList">
+    <p>{{book.title1}}, {{book.author1}}</p>
 </div>

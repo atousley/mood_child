@@ -7,7 +7,7 @@ var visionSchema = new Schema({
         "author": String
     },
     "reading_list": [
-        {"title": String, "author": String}
+        {"title1": String, "author1": String}
     ]
 });
 
