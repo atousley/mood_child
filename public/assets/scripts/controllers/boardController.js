@@ -15,6 +15,9 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function(
         $scope.visions = $scope.visionboard[$scope.currentVision];
         //console.log($scope.visions.reading_list);
 
+        $scope.current_book = $scope.visions.current_book;
+        //console.log($scope.current_book);
+
         $scope.readingList = $scope.visions.reading_list;
 
         $scope.delights = $scope.visions.delight;
@@ -22,3 +25,8 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function(
     });
 
 }]);
+
+// .then(function() {
+//    $scope.visionHistory = $scope.dataFactory.userInfo();
+//    console.log(visionHistory);
+//});

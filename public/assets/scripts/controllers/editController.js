@@ -4,6 +4,44 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', function($
 
     $scope.dataFactory = DataFactory;
 
+    $scope.dataFactory.retrieveUser().then(function() {
+        $scope.userData = $scope.dataFactory.userInfo();
+        //console.log($scope.userData);
+
+        $scope.visionboard = $scope.userData.visionboard;
+        //console.log($scope.vision);
+
+        $scope.currentVision = $scope.visionboard.length - 1;
+        //console.log($scope.currentVision);
+
+        $scope.visions = $scope.visionboard[$scope.currentVision];
+        //console.log($scope.visions);
+
+        $scope.title = $scope.visions.current_book.title;
+        $scope.author = $scope.visions.current_book.author;
+        $scope.title1 = $scope.visions.reading_list[0].title;
+        $scope.author1 = $scope.visions.reading_list[0].author;
+        $scope.title2 = $scope.visions.reading_list[1].title;
+        $scope.author2 = $scope.visions.reading_list[1].author;
+        $scope.title3 = $scope.visions.reading_list[2].title;
+        $scope.author3 = $scope.visions.reading_list[2].author;
+        $scope.title4 = $scope.visions.reading_list[3].title;
+        $scope.author4 = $scope.visions.reading_list[3].author;
+        $scope.title5 = $scope.visions.reading_list[4].title;
+        $scope.author5 = $scope.visions.reading_list[4].author;
+
+        $scope.delight1 = $scope.visions.delight[0].delight;
+        $scope.delight2 = $scope.visions.delight[1].delight;
+        $scope.delight3 = $scope.visions.delight[2].delight;
+        $scope.delight4 = $scope.visions.delight[3].delight;
+        $scope.delight5 = $scope.visions.delight[4].delight;
+        $scope.delight6 = $scope.visions.delight[5].delight;
+        $scope.delight7 = $scope.visions.delight[6].delight;
+        $scope.delight8 = $scope.visions.delight[7].delight;
+
+
+    });
+
 
     $scope.saveVision = function() {
         //console.log('save function firing', id);
