@@ -16,3 +16,16 @@ body {
     padding: 1%;
     margin: 1%;
 }
+
+.login #username, .login #password, .register #username, .register #password {
+    border: 1px solid;
+    width: 60%;
+    padding: .5%;
+}
+
+#submit {
+    background-color: white;
+    font-weight: bold;
+    display: block;
+    margin: 2% auto 0;
+}
