@@ -24,11 +24,11 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function(
 
         $scope.thoughts = $scope.visions.thoughts;
 
+        $scope.travels = $scope.visions.travel;
+
+        $scope.current_objectives = $scope.visions.current_career;
+        $scope.future_objectives = $scope.visions.future_career;
+
     });
 
 }]);
-
-// .then(function() {
-//    $scope.visionHistory = $scope.dataFactory.userInfo();
-//    console.log(visionHistory);
-//});

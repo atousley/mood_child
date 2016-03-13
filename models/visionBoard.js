@@ -15,6 +15,15 @@ var visionSchema = new Schema({
     ],
     "thoughts": [
         {"thought": String}
+    ],
+    "travel": [
+        {"travel": String}
+    ],
+    "current_career": [
+        {"objective": String}
+    ],
+    "future_career": [
+        {"objective": String}
     ]
 });
 

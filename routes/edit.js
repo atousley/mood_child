@@ -50,6 +50,25 @@ router.post('/:id', function(req, res) {
             {"thought": req.body.thought2},
             {"thought": req.body.thought3},
             {"thought": req.body.thought4}
+        ],
+        "travel": [
+            {"travel": req.body.travel1},
+            {"travel": req.body.travel2},
+            {"travel": req.body.travel3},
+            {"travel": req.body.travel4},
+            {"travel": req.body.travel5}
+        ],
+        "current_career": [
+            {"objective": req.body.current_career1},
+            {"objective": req.body.current_career2},
+            {"objective": req.body.current_career3}
+        ],
+        "future_career": [
+            {"objective": req.body.future_career1},
+            {"objective": req.body.future_career2},
+            {"objective": req.body.future_career3},
+            {"objective": req.body.future_career4},
+            {"objective": req.body.future_career5}
         ]
     });
     //console.log(newVision);

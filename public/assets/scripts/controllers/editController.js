@@ -15,7 +15,7 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', function($
         //console.log($scope.currentVision);
 
         $scope.visions = $scope.visionboard[$scope.currentVision];
-        console.log($scope.visions);
+        //console.log($scope.visions);
 
         $scope.title = $scope.visions.current_book.title;
         $scope.author = $scope.visions.current_book.author;
@@ -44,6 +44,21 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', function($
         $scope.thought3 = $scope.visions.thoughts[2].thought;
         $scope.thought4 = $scope.visions.thoughts[3].thought;
 
+        $scope.travel1 = $scope.visions.travel[0].travel;
+        $scope.travel2 = $scope.visions.travel[1].travel;
+        $scope.travel3 = $scope.visions.travel[2].travel;
+        $scope.travel4 = $scope.visions.travel[3].travel;
+        $scope.travel5 = $scope.visions.travel[4].travel;
+
+        $scope.current_career1 = $scope.visions.current_career[0].objective;
+        $scope.current_career2 = $scope.visions.current_career[1].objective;
+        $scope.current_career3 = $scope.visions.current_career[2].objective;
+
+        $scope.future_career1 = $scope.visions.future_career[0].objective;
+        $scope.future_career2 = $scope.visions.future_career[1].objective;
+        $scope.future_career3 = $scope.visions.future_career[2].objective;
+        $scope.future_career4 = $scope.visions.future_career[3].objective;
+        $scope.future_career5 = $scope.visions.future_career[4].objective;
     });
 
 
@@ -77,7 +92,21 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', function($
             thought1: $scope.thought1,
             thought2: $scope.thought2,
             thought3: $scope.thought3,
-            thought4: $scope.thought4
+            thought4: $scope.thought4,
+            travel1: $scope.travel1,
+            travel2: $scope.travel2,
+            travel3: $scope.travel3,
+            travel4: $scope.travel4,
+            travel5: $scope.travel5,
+            current_career1: $scope.current_career1,
+            current_career2: $scope.current_career2,
+            current_career3: $scope.current_career3,
+            future_career1: $scope.future_career1,
+            future_career2: $scope.future_career2,
+            future_career3: $scope.future_career3,
+            future_career4: $scope.future_career4,
+            future_career5: $scope.future_career5
+
         };
 
         $scope.dataFactory.sendVision(vision);
