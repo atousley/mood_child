@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Express / Passport</title>
+    <title>Moon Child - Login</title>
     <link rel="stylesheet" href="/assets/styles/style.css">
 
-    <!--<script type="text/javascript" src="/vendors/angular.js"></script>-->
-    <!--<script type="text/javascript" src="/vendors/angular-route.min.js"></script>-->
+    <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,400italic,500,700' rel='stylesheet' type='text/css'>
 
-    <!--<script type="text/javascript" src="/assets/scripts/app.js"></script>-->
 </head>
 
 <body>
 <div class="instructions">
     <div class="container">
-        <h1 class="lead">Passport Login</h1>
+        <h1 class="lead">Moon Child Login</h1>
     </div>
 </div>
-<div class="container">
+<div class="login">
     <form action="/user/login" method="post">
+        <label>Login</label>
         <div>
             <label for="username">Username:</label>
             <input type="text" name="username" id="username"/>
@@ -26,15 +25,16 @@
             <label for="password">Password:</label>
             <input type="password" name="password" id="password"/>
         </div>
-        <div>
-            <input type="submit" value="Log In"/>
-        </div>
+
+        <input type="submit" value="Log In"/>
     </form>
 </div>
 
-<div class="container">
+<div class="register">
 
     <form action="/user/register" method="post">
+        <label>Register</label>
+
         <div>
             <label for="username">Username:</label>
             <input type="text" name="username" id="username">
