@@ -15,7 +15,7 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', function($
         //console.log($scope.currentVision);
 
         $scope.visions = $scope.visionboard[$scope.currentVision];
-        //console.log($scope.visions);
+        console.log($scope.visions);
 
         $scope.title = $scope.visions.current_book.title;
         $scope.author = $scope.visions.current_book.author;
@@ -39,6 +39,10 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', function($
         $scope.delight7 = $scope.visions.delight[6].delight;
         $scope.delight8 = $scope.visions.delight[7].delight;
 
+        $scope.thought1 = $scope.visions.thoughts[0].thought;
+        $scope.thought2 = $scope.visions.thoughts[1].thought;
+        $scope.thought3 = $scope.visions.thoughts[2].thought;
+        $scope.thought4 = $scope.visions.thoughts[3].thought;
 
     });
 
@@ -69,7 +73,11 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', function($
             delight5: $scope.delight5,
             delight6: $scope.delight6,
             delight7: $scope.delight7,
-            delight8: $scope.delight8
+            delight8: $scope.delight8,
+            thought1: $scope.thought1,
+            thought2: $scope.thought2,
+            thought3: $scope.thought3,
+            thought4: $scope.thought4
         };
 
         $scope.dataFactory.sendVision(vision);

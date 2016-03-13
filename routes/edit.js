@@ -6,7 +6,7 @@ var Vision = require('../models/visionBoard');
 
 
 router.post('/:id', function(req, res) {
-    console.log(req.body);
+    //console.log(req.body);
     var newVision = new Vision({
         "date": Date(),
         "current_book": {
@@ -44,6 +44,12 @@ router.post('/:id', function(req, res) {
             {"delight": req.body.delight6},
             {"delight": req.body.delight7},
             {"delight": req.body.delight8}
+        ],
+        "thoughts": [
+            {"thought": req.body.thought1},
+            {"thought": req.body.thought2},
+            {"thought": req.body.thought3},
+            {"thought": req.body.thought4}
         ]
     });
     //console.log(newVision);

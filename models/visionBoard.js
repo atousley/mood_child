@@ -12,6 +12,9 @@ var visionSchema = new Schema({
     ],
     "delight": [
         {"delight": String}
+    ],
+    "thoughts": [
+        {"thought": String}
     ]
 });
 

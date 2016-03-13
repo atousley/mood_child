@@ -1,11 +1,6 @@
 myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
 
     var userData = undefined;
-    var visionBoard;
-    var currentVision;
-    var visions;
-    var readingList;
-    var delights;
 
     var postVision = function(data) {
         //console.log('sending to post', data);
@@ -19,10 +14,7 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
             if(response.data) {
                 //console.log(response.data);
                 userData = response.data;
-                //userName = response.data.username;
                 id = response.data._id;
-                //vision = response.data.visionboard;
-                //console.log('User Data: ', userData, id);
             } else {
                 $window.location.href = '/index.html';
             }
