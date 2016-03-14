@@ -1,40 +1,45 @@
 <div id="vision_board">
-    <div class="left_section">
-        <div class="current_book" ng-model="current_book">
-            <h2>Currently Reading</h2>
-            <p>{{current_book.title}}</p>
-            <p>{{current_book.author}}</p>
-        </div>
-
-        <div class="reading_list">
-            <h2>Reading List</h2>
-            <div ng-repeat="book in readingList">
-                <p>{{book.title}}, {{book.author}}</p>
+    <div class="main_section">
+        <div class="left_section">
+            <div class="current_book" ng-model="current_book">
+                <h2>Currently Reading</h2>
+                <p>{{current_book.title}}</p>
+                <p>{{current_book.author}}</p>
             </div>
-        </div>
-    </div>
 
-    <div class="center_section">
-        <div class="delight">
-            <h2>Delight</h2>
-            <div ng-repeat="delight in delights">
-                <p>{{delight.delight}}</p>
+            <div class="reading_list">
+                <h2>Reading List</h2>
+                <div ng-repeat="book in readingList">
+                    <p>{{book.title}}, {{book.author}}</p>
+                </div>
             </div>
         </div>
 
-        <div class="thoughts">
-            <h2>Thoughts</h2>
-            <div ng-repeat="thought in thoughts">
-                <p>{{thought.thought}}</p>
+        <div class="center_section">
+            <div class="delight">
+                <h2>Delight</h2>
+                <div ng-repeat="delight in delights">
+                    <p>{{delight.delight}}</p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <h2>Thoughts</h2>
+                <div ng-repeat="thought in thoughts">
+                    <p>{{thought.thought}}</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="right_section">
-        <div class="travel">
-            <h2>Travel</h2>
-            <div ng-repeat="travel in travels">
-                <p>{{travel.travel}}</p>
+        <div class="right_section">
+            <div class="travel_api">
+                <img src="http://s1.ibtimes.com/sites/www.ibtimes.com/files/2015/05/18/memorial-day-travel.jpg">
+            </div>
+            <div class="travel">
+                <h2>Travel</h2>
+                <div ng-repeat="travel in travels">
+                    <p>{{travel.travel}}</p>
+                </div>
             </div>
         </div>
     </div>

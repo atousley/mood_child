@@ -5,7 +5,6 @@
 }
 
 body {
-    /*margin: 5%;*/
     font-family: 'Fira Sans', sans-serif;
 }
 
@@ -84,34 +83,39 @@ a:hover {
     font-size: 100%;
 }
 
-.current_book, .reading_list {
-    display: block;
-    width: 20%;
-    /*float: left;*/
+
+.main_section {
+    display: flex;
+    /*width: 100%;*/
+    margin: 1%;
+    justify-content: center;
 }
 
-/*.reading_list {*/
-    /*width: 20%;*/
-/*}*/
+.left_section, .right_section {
+    display: inline-block;
+    width: 25%;
+    float: left;
+    margin: 1% 0;
+}
 
-.delight, .thoughts {
+.center_section {
+    display: inline-block;
     width: 45%;
-    /*float: left;*/
+    float: left;
+    margin: 1%;
 }
 
-/*.thoughts {*/
-    /*display: block;*/
-    /*border: 1px solid;*/
-/*}*/
+.current_book, .delight, .travel_api {
+    margin-bottom: 3%;
+}
 
-.travel {
-    width: 20%;
+.travel_api img {
+    max-width: 100%;
 }
 
 .career {
     display: inline-block;
     width: 100%;
-    /*justify-content: flex-start;*/
 }
 
 .career h2 {
