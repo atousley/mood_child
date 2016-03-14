@@ -10,6 +10,7 @@ var session = require('express-session');
 //var index = require('./routes/index');
 var user = require('./routes/user');
 var edit = require('./routes/edit');
+var place = require('./routes/place');
 
 
 app.use(bodyParser.json());
@@ -32,6 +33,7 @@ app.use(passport.session());
 // Routes
 app.use('/user', user);
 app.use('/edit', edit);
+app.use('/place', place);
 
 // Serve back static files
 app.use(express.static('public'));

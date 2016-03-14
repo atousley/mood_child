@@ -31,4 +31,10 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function(
 
     });
 
+    //API Call
+    $scope.dataFactory.getImg();
+        //.then(function() {
+    //   console.log('going to get image');
+    //});
+
 }]);

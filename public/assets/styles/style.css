@@ -8,6 +8,18 @@ body {
     font-family: 'Fira Sans', sans-serif;
 }
 
+.header_container h1 {
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
 .register, .login {
     display: inline-block;
     border: 1px solid;
@@ -30,7 +42,7 @@ body {
     margin: 2% auto 0;
 }
 
-.nav_main {
+.nav_main, .header_container {
     background-color: lightgray;
 }
 
@@ -86,7 +98,6 @@ a:hover {
 
 .main_section {
     display: flex;
-    /*width: 100%;*/
     margin: 1%;
     justify-content: center;
 }
@@ -130,4 +141,13 @@ a:hover {
 .future_career {
     display: inline-block;
     width: 35%;
+}
+
+.current_book .label {
+    float: left;
+}
+textarea, input[type] {
+    border: 1px solid;
+    display: flex;
+    justify-content: flex-end;
 }

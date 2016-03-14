@@ -9,45 +9,39 @@
 </head>
 
 <body>
-<div class="instructions">
-    <div class="container">
+    <div class="header_container">
         <h1 class="lead">Moon Child Login</h1>
     </div>
-</div>
-<div class="login">
-    <form action="/user/login" method="post">
-        <label>Login</label>
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username"/>
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password"/>
-        </div>
-
-        <input type="submit" id="submit" value="Log In"/>
-    </form>
-</div>
-
-<div class="register">
-
-    <form action="/user/register" method="post">
-        <label>Register</label>
-
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username">
+    <div class="main">
+        <div class="login">
+            <form action="/user/login" method="post">
+                <label>Login</label>
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username"/>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password"/>
+                </div>
+                <input type="submit" id="submit" value="Log In"/>
+            </form>
         </div>
 
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password">
+        <div class="register">
+            <form action="/user/register" method="post">
+                <label>Register</label>
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username">
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <input type="submit" id="submit" value="Register"/>
+            </form>
         </div>
-
-        <input type="submit" id="submit" value="Register"/>
-    </form>
-</div>
-
+    </div>
 </body>
 </html>

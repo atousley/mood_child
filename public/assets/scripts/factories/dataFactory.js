@@ -2,6 +2,13 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
 
     var userData = undefined;
 
+    var getImg = function() {
+        console.log('second get image call is functioning');
+        //$http.get('/place').then(function(response) {
+        //    placeInfo = response.data;
+        //});
+    };
+
     var postVision = function(data) {
         //console.log('sending to post', data);
         $http.post('/edit/' + id, data).then(function(response) {
@@ -33,6 +40,10 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
             //console.log('vision in factory', vision);
 
             postVision(vision);
+        },
+
+        getImg: function() {
+            return getImg();
         }
 
     };
