@@ -1,43 +1,58 @@
 <div id="vision_board">
-    <div class="current_book" ng-model="current_book">
-        <p>{{current_book.title}}</p>
-        <p>{{current_book.author}}</p>
-    </div>
+    <div class="left_section">
+        <div class="current_book" ng-model="current_book">
+            <h2>Currently Reading</h2>
+            <p>{{current_book.title}}</p>
+            <p>{{current_book.author}}</p>
+        </div>
 
-    <div class="reading_list">
-        <div ng-repeat="book in readingList">
-            <p>{{book.title}}, {{book.author}}</p>
+        <div class="reading_list">
+            <h2>Reading List</h2>
+            <div ng-repeat="book in readingList">
+                <p>{{book.title}}, {{book.author}}</p>
+            </div>
         </div>
     </div>
 
-    <div class="delight">
-        <div ng-repeat="delight in delights">
-            <p>{{delight.delight}}</p>
+    <div class="center_section">
+        <div class="delight">
+            <h2>Delight</h2>
+            <div ng-repeat="delight in delights">
+                <p>{{delight.delight}}</p>
+            </div>
+        </div>
+
+        <div class="thoughts">
+            <h2>Thoughts</h2>
+            <div ng-repeat="thought in thoughts">
+                <p>{{thought.thought}}</p>
+            </div>
         </div>
     </div>
 
-    <div class="thoughts">
-        <div ng-repeat="thought in thoughts">
-            <p>{{thought.thought}}</p>
+    <div class="right_section">
+        <div class="travel">
+            <h2>Travel</h2>
+            <div ng-repeat="travel in travels">
+                <p>{{travel.travel}}</p>
+            </div>
         </div>
     </div>
 
-    <div class="travel">
-        <div ng-repeat="travel in travels">
-            <p>{{travel.travel}}</p>
-        </div>
-    </div>
-
+<div class="career">
+    <h2>Career</h2>
     <div class="current_career">
+        <h3>Current Objectives</h3>
         <div ng-repeat="current in current_objectives">
             <p>{{current.objective}}</p>
         </div>
     </div>
 
     <div class="future_career">
+        <h3>Future Thoughts</h3>
         <div ng-repeat="future in future_objectives">
             <p>{{future.objective}}</p>
         </div>
     </div>
-
+</div>
 </div>

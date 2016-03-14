@@ -31,9 +31,11 @@ body {
     margin: 2% auto 0;
 }
 
-.nav_main ul {
-    /*margin-top: 1%;*/
+.nav_main {
     background-color: lightgray;
+}
+
+.nav_main ul {
     display: flex;
     justify-content: left;
 }
@@ -41,7 +43,8 @@ body {
 .nav_main li {
     list-style-type: none;
     display: inline;
-    margin: .5%;
+    margin: .5% .5% 0 1%;
+    font-size: 80%;
 }
 
 a {
@@ -53,46 +56,74 @@ a:hover {
     text-decoration: underline;
 }
 
+.nav_main h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 250%;
+}
+
 #vision_board {
     margin: 1% 5% 1% 5%;
 }
 
 .current_book, .reading_list,
-.delight, .thoughts, .travel,
-.current_career, .future_career {
-    display: block;
+.delight, .thoughts, .travel, .career {
+    /*display: block;*/
     border: 1px solid;
     margin: .5%;
     padding: .5%;
 
 }
 
+.current_book h2, .reading_list h2,
+.delight h2, .thoughts h2, .travel h2, .career h2 {
+    font-size: 125%;
+}
+
+.current_career h3, .future_career h3 {
+    font-size: 100%;
+}
+
+.current_book, .reading_list {
+    display: block;
+    width: 20%;
+    /*float: left;*/
+}
+
 /*.reading_list {*/
-    /*display: block;*/
-    /*border: 1px solid;*/
+    /*width: 20%;*/
 /*}*/
 
-/*.delight {*/
-    /*display: block;*/
-    /*border: 1px solid;*/
-/*}*/
+.delight, .thoughts {
+    width: 45%;
+    /*float: left;*/
+}
 
 /*.thoughts {*/
     /*display: block;*/
     /*border: 1px solid;*/
 /*}*/
 
-/*.travel {*/
-    /*display: block;*/
-    /*border: 1px solid;*/
-/*}*/
+.travel {
+    width: 20%;
+}
 
-/*.current_career {*/
-    /*display: block;*/
-    /*border: 1px solid;*/
-/*}*/
+.career {
+    display: inline-block;
+    width: 100%;
+    /*justify-content: flex-start;*/
+}
 
-/*.future_career {*/
-    /*display: block;*/
-    /*border: 1px solid;*/
-/*}*/
+.career h2 {
+    width: 0;
+}
+.current_career {
+    display: inline-block;
+    float: left;
+    width: 60%;
+}
+
+.future_career {
+    display: inline-block;
+    width: 35%;
+}
