@@ -5,7 +5,7 @@
 }
 
 body {
-    margin: 5%;
+    /*margin: 5%;*/
     font-family: 'Fira Sans', sans-serif;
 }
 
@@ -17,7 +17,8 @@ body {
     margin: 1%;
 }
 
-.login #username, .login #password, .register #username, .register #password {
+.login #username, .login #password,
+.register #username, .register #password {
     border: 1px solid;
     width: 60%;
     padding: .5%;
@@ -29,3 +30,69 @@ body {
     display: block;
     margin: 2% auto 0;
 }
+
+.nav_main ul {
+    /*margin-top: 1%;*/
+    background-color: lightgray;
+    display: flex;
+    justify-content: left;
+}
+
+.nav_main li {
+    list-style-type: none;
+    display: inline;
+    margin: .5%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#vision_board {
+    margin: 1% 5% 1% 5%;
+}
+
+.current_book, .reading_list,
+.delight, .thoughts, .travel,
+.current_career, .future_career {
+    display: block;
+    border: 1px solid;
+    margin: .5%;
+    padding: .5%;
+
+}
+
+/*.reading_list {*/
+    /*display: block;*/
+    /*border: 1px solid;*/
+/*}*/
+
+/*.delight {*/
+    /*display: block;*/
+    /*border: 1px solid;*/
+/*}*/
+
+/*.thoughts {*/
+    /*display: block;*/
+    /*border: 1px solid;*/
+/*}*/
+
+/*.travel {*/
+    /*display: block;*/
+    /*border: 1px solid;*/
+/*}*/
+
+/*.current_career {*/
+    /*display: block;*/
+    /*border: 1px solid;*/
+/*}*/
+
+/*.future_career {*/
+    /*display: block;*/
+    /*border: 1px solid;*/
+/*}*/
