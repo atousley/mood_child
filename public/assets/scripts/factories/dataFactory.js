@@ -4,9 +4,10 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
 
     var getImg = function() {
         console.log('second get image call is functioning');
-        //$http.get('/place').then(function(response) {
-        //    placeInfo = response.data;
-        //});
+        $http.get('/place').then(function(response) {
+            gettyImg = response.data;
+            console.log(gettyImg);
+        });
     };
 
     var postVision = function(data) {

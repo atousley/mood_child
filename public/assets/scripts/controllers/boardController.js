@@ -33,8 +33,43 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function(
 
     //API Call
     $scope.dataFactory.getImg();
-        //.then(function() {
-    //   console.log('going to get image');
-    //});
 
+    //function getPhoto() {
+    //    var key = '9gydgjbpck44x4wcn4nf8yxd';
+    //    var location = 'chicago';
+    //
+    //    //GET https://api.gettyimages.com/v3/search/images?phrase=<query term>
+    //
+    //    var baseURL = 'https://api.gettyimages.com/v3/search/images';
+    //    var query = '?phrase=' + location;
+    //    query += '?key=' + key;
+    //
+    //    var request = baseURL + encodeURI(query);
+    //
+    //    $http.jsonp(request).then(function(response) {
+    //        $scope.imageInfo = response;
+    //        console.log(imageInfo);
+    //    });
+    //}
+    //getPhoto();
 }]);
+
+//function petFinder(animal) {
+//        var key = '705cf21bd32eabe8c89315ec944817be';
+//
+//        var baseURL = 'http://api.petfinder.com/';
+//        var query = 'pet.getRandom';
+//        query += '?key=' + key;
+//        query += '&animal=' + animal;
+//        query += '&output=basic';
+//        query += '&format=json';
+//
+//        var request = baseURL + encodeURI(query) + '&callback=JSON_CALLBACK';
+//        console.log(request);
+//
+//        $http.jsonp(request).then(
+//            function(response) {
+//                $scope.animal = response.data.petfinder.pet;
+//            }
+//        );
+//    }
