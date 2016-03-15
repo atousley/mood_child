@@ -8,12 +8,14 @@ body {
     font-family: 'Fira Sans', sans-serif;
 }
 
+/*HEADER*/
 .header_container h1 {
     padding: 1%;
     display: flex;
     justify-content: center;
 }
 
+/*INDEX*/
 .main {
     display: flex;
     justify-content: center;
@@ -42,6 +44,7 @@ body {
     margin: 2% auto 0;
 }
 
+/*NAVIGATION*/
 .nav_main, .header_container {
     background-color: lightgray;
 }
@@ -73,17 +76,16 @@ a:hover {
     font-size: 250%;
 }
 
+/*BOARD VIEW*/
 #vision_board {
     margin: 1% 5% 1% 5%;
 }
 
 .current_book, .reading_list,
 .delight, .thoughts, .travel, .career {
-    /*display: block;*/
     border: 1px solid;
     margin: .5%;
     padding: .5%;
-
 }
 
 .current_book h2, .reading_list h2,
@@ -143,11 +145,105 @@ a:hover {
     width: 35%;
 }
 
-.current_book .label {
-    float: left;
+/*EDIT VIEW*/
+#edit_header {
+    margin-left: 1%;
 }
+
+#current_book, #reading_list,
+#delight, #thoughts, #travel, #career {
+    border: 1px solid;
+    margin: .5%;
+    padding: .5% 2%;
+}
+
+#current_book h2, #reading_list h2,
+#delight h2, #thoughts h2, #travel h2, #career h2 {
+    font-size: 125%;
+}
+
+#current_career h3, #future_career h3 {
+    font-size: 100%;
+}
+
+#main_section {
+    display: flex;
+    margin: 1%;
+    justify-content: center;
+}
+
+#left_section, #right_section {
+    display: inline-block;
+    width: 25%;
+    float: left;
+    margin: 1% 0;
+}
+
+#center_section {
+    display: inline-block;
+    width: 45%;
+    float: left;
+    margin: 1%;
+}
+
+#current_book, #delight {
+    margin-bottom: 3%;
+}
+
+#career {
+    display: inline-block;
+    width: 100%;
+}
+
+#career h2 {
+    width: 0;
+}
+#current_career {
+    display: inline-block;
+    float: left;
+    width: 60%;
+}
+
+#future_career {
+    display: inline-block;
+    width: 35%;
+}
+
+#delight input, #thoughts input {
+    display: block;
+    margin: 1%;
+    width: 90%;
+}
+
+#travel input {
+    display: block;
+    margin: 1%;
+    width: 75%;
+}
+
 textarea, input[type] {
     border: 1px solid;
-    display: flex;
-    justify-content: flex-end;
+    padding: 1%;
+}
+
+#current_book #author {
+    margin-bottom: 4%;
+}
+
+#reading_list #author1, #reading_list #author2,
+#reading_list #author3, #reading_list #author4,
+#reading_list #author5 {
+    margin-bottom: 4%;
+}
+
+#save {
+    background-color: white;
+    font-weight: bold;
+    display: block;
+    margin: 2% auto 2%;
+    font-size: 150%;
+}
+
+#save:hover {
+    text-decoration: underline;
 }
