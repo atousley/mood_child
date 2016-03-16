@@ -1,12 +1,10 @@
 var express = require('express');
 var router = express.Router();
-//var mongoose = require('mongoose');
 var User = require('../models/user');
 var Vision = require('../models/visionBoard');
 
 
 router.post('/:id', function(req, res) {
-    //console.log(req.body);
     var newVision = new Vision({
         "date": Date(),
         "current_book": {
@@ -71,12 +69,8 @@ router.post('/:id', function(req, res) {
             {"objective": req.body.future_career5}
         ]
     });
-    //console.log(newVision);
 
     User.findById(req.params.id, function (err, result) {
-
-
-        //console.log('RESULT', result);
 
         result.visionboard.push(newVision);
 
@@ -85,7 +79,6 @@ router.post('/:id', function(req, res) {
                 console.log(err);
             }
             res.send(result);
-            //console.log(result);
         });
 
     });

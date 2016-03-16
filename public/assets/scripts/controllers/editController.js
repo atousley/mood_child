@@ -1,21 +1,15 @@
 myApp.controller('EditController', ['$scope', 'DataFactory', '$http', function($scope, DataFactory, $http) {
 
-    //console.log('edit controller hooked up');
-
     $scope.dataFactory = DataFactory;
 
     $scope.dataFactory.retrieveUser().then(function() {
         $scope.userData = $scope.dataFactory.userInfo();
-        //console.log($scope.userData);
 
         $scope.visionboard = $scope.userData.visionboard;
-        //console.log($scope.vision);
 
         $scope.currentVision = $scope.visionboard.length - 1;
-        //console.log($scope.currentVision);
 
         $scope.visions = $scope.visionboard[$scope.currentVision];
-        //console.log($scope.visions);
 
         $scope.title = $scope.visions.current_book.title;
         $scope.author = $scope.visions.current_book.author;
@@ -63,8 +57,6 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', function($
 
 
     $scope.saveVision = function() {
-        //console.log('save function firing', id);
-
         $scope.dataFactory = DataFactory;
 
         var vision = {
@@ -110,9 +102,6 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', function($
         };
 
         $scope.dataFactory.sendVision(vision);
-        //.then(function() {
-        //    $scope.user = $scope.dataFactory.userInfo();
-        //    console.log($scope.user);
     }
 
 }]);

@@ -27,7 +27,6 @@ myApp.controller('UserController', ['$scope', 'DataFactory', '$http', '$window',
 
     $scope.dataFactory.retrieveUser().then(function() {
         $scope.user = $scope.dataFactory.userInfo().username;
-        //console.log($scope.user);
     });
 
 }]);
