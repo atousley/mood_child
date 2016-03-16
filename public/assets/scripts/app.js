@@ -13,7 +13,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
         })
         .when('/archive', {
             templateUrl: '/views/templates/archive.html',
-            //controller: ''
+            controller: 'ArchiveController'
         })
         .otherwise({
             redirectTo: 'board'
