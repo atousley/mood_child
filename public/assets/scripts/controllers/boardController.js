@@ -4,7 +4,9 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function(
 
     $scope.location = 'france';
 
-    console.log($scope.location);
+    $scope.backup = 'http://s1.ibtimes.com/sites/www.ibtimes.com/files/2015/05/18/memorial-day-travel.jpg';
+
+    //console.log($scope.location);
 
     $scope.dataFactory.retrieveUser().then(function() {
         $scope.userData = $scope.dataFactory.userInfo();
@@ -43,12 +45,15 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function(
 
     //API Call
     function getImage() {
+        var randomImg = Math.floor((Math.random() * 50) + 1);
+        //console.log(randomImg);
+
         $scope.dataFactory.getImg($scope.location).then(function() {
             $scope.imgInfo = $scope.dataFactory.gettyInfo();
-            console.log($scope.imgInfo);
+            //console.log($scope.imgInfo);
 
-            $scope.imgLink = $scope.imgInfo[0].display_sizes[0].uri;
-            console.log($scope.imgLink);
+            $scope.imgLink = $scope.imgInfo[randomImg].display_sizes[0].uri;
+            //console.log($scope.imgLink);
         });
     }
 

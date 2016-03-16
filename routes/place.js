@@ -8,12 +8,16 @@ var client = new getty (credentials);
 
 
 router.get('/:location' , function(req, res) {
-    //console.log(req.params);
+    //console.log('these are params', req.params);
     var location = req.params.location;
+    //console.log(location);
     client.search().images().creative().withResponseField('comp').withGraphicalStyle('photography')
-        .withPageSize(3).withPhrase('travel' + ' ' + location)
+        .withPageSize(50).withPhrase('travel' + ' ' + location)
         .execute(function(err, response) {
-            if (err) throw err
+            if (err) {
+                console.log(err);
+                //throw err;
+            }
             //console.log(JSON.stringify(response.images[]));
             res.send(response.images);
         });
