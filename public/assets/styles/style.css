@@ -13,6 +13,10 @@ body {
     padding: 1%;
     display: flex;
     justify-content: center;
+    font-size: 250%;
+    font-weight: 700;
+    background-color: #edecec;
+
 }
 
 /*INDEX*/
@@ -46,7 +50,7 @@ body {
 
 /*NAVIGATION*/
 .nav_main, .header_container {
-    background-color: lightgray;
+    background-color: white;
 }
 
 .nav_main ul {
@@ -74,18 +78,21 @@ a:hover {
     display: flex;
     justify-content: center;
     font-size: 250%;
+    font-weight: 700;
 }
 
 /*BOARD VIEW*/
-#vision_board {
-    margin: 1% 5% 1% 5%;
+.vision_board {
+    /*margin: 1% 5% 1% 5%;*/
+    background-color: #edecec;
 }
 
 .current_book, .reading_list,
-.delight, .thoughts, .travel, .career {
-    border: 1px solid;
-    margin: .5%;
-    padding: .5%;
+.delight, .thoughts, .travel {
+    /*border: 1px solid;*/
+    /*margin: .5%;*/
+    padding: 1%;
+    background-color: white;
 }
 
 .current_book h2, .reading_list h2,
@@ -100,8 +107,8 @@ a:hover {
 
 .main_section {
     display: flex;
-    margin: 1%;
     justify-content: center;
+    width: 100%;
 }
 
 .left_section, .right_section {
@@ -113,7 +120,7 @@ a:hover {
 
 .center_section {
     display: inline-block;
-    width: 45%;
+    width: 46%;
     float: left;
     margin: 1%;
 }
@@ -123,12 +130,21 @@ a:hover {
 }
 
 .travel_api img {
-   width: 80%;
+   width: 100%;
+}
+
+.bottom_section {
+    display: flex;
+    justify-content: center;
 }
 
 .career {
     display: inline-block;
-    width: 100%;
+    width: 96%;
+    margin: 1%;
+    padding: 1%;
+    background-color: white;
+    justify-content: center;
 }
 
 .career h2 {
@@ -150,11 +166,17 @@ a:hover {
     margin-left: 1%;
 }
 
+#vision_board {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
 #current_book, #reading_list,
-#delight, #thoughts, #travel, #career {
-    border: 1px solid;
+#delight, #thoughts, #travel {
+    /*border: 1px solid;*/
     margin: .5%;
     padding: .5% 2%;
+    background-color: white;
 }
 
 #current_book h2, #reading_list h2,
@@ -181,7 +203,7 @@ a:hover {
 
 #center_section {
     display: inline-block;
-    width: 45%;
+    width: 46%;
     float: left;
     margin: 1%;
 }
@@ -190,9 +212,16 @@ a:hover {
     margin-bottom: 3%;
 }
 
+#bottom_section {
+    display: flex;
+    justify-content: center;
+}
+
 #career {
     display: inline-block;
-    width: 100%;
+    width: 96%;
+    background-color: white;
+    padding-bottom: 1%;
 }
 
 #career h2 {
@@ -201,15 +230,17 @@ a:hover {
 #current_career {
     display: inline-block;
     float: left;
-    width: 60%;
+    width: 50%;
 }
 
 #future_career {
     display: inline-block;
-    width: 35%;
+    float: right;
+    width: 40%;
 }
 
-#delight input, #thoughts input {
+#delight input, #thoughts input,
+#future_career input, #current_career input {
     display: block;
     margin: 1%;
     width: 90%;
@@ -233,7 +264,7 @@ textarea, input[type] {
 #reading_list #author1, #reading_list #author2,
 #reading_list #author3, #reading_list #author4,
 #reading_list #author5 {
-    margin-bottom: 4%;
+    margin-bottom: 7%;
 }
 
 #save {
@@ -241,7 +272,9 @@ textarea, input[type] {
     font-weight: bold;
     display: block;
     margin: 2% auto 2%;
+    width: 100%;
     font-size: 150%;
+    /*border-top: 1px solid;*/
 }
 
 #save:hover {

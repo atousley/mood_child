@@ -1,4 +1,5 @@
-<div id="vision_board">
+<div class="vision_board">
+
     <div class="main_section">
         <div class="left_section">
             <div class="current_book" ng-model="current_book">
@@ -44,21 +45,23 @@
             </div>
         </div>
     </div>
-
-<div class="career">
-    <h2>Career</h2>
-    <div class="current_career">
-        <h3>Current Objectives</h3>
-        <div ng-repeat="current in current_objectives">
-            <p>{{current.objective}}</p>
+<div class="bottom_section">
+    <div class="career">
+        <h2>Career</h2>
+        <div class="current_career">
+            <h3>Current Objectives</h3>
+            <div ng-repeat="current in current_objectives">
+                <p>{{current.objective}}</p>
+            </div>
         </div>
-    </div>
 
-    <div class="future_career">
-        <h3>Future Thoughts</h3>
-        <div ng-repeat="future in future_objectives">
-            <p>{{future.objective}}</p>
+        <div class="future_career">
+            <h3>Future Thoughts</h3>
+            <div ng-repeat="future in future_objectives">
+                <p>{{future.objective}}</p>
+            </div>
         </div>
     </div>
 </div>
+
 </div>

@@ -3,9 +3,10 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
     var userData = undefined;
     var gettyImg = undefined;
 
-    var getImg = function() {
+    var getImg = function(location) {
         console.log('second get image call is functioning');
-        var promise = $http.get('/place').then(function(response) {
+        console.log(location);
+        var promise = $http.get('/place/' + location).then(function(response) {
             gettyImg = response.data;
             console.log(gettyImg);
         });
@@ -50,8 +51,8 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
             postVision(vision);
         },
 
-        getImg: function() {
-            return getImg();
+        getImg: function(location) {
+            return getImg(location);
         }
 
     };

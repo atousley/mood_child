@@ -2,6 +2,10 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function(
 
     $scope.dataFactory = DataFactory;
 
+    $scope.location = 'france';
+
+    console.log($scope.location);
+
     $scope.dataFactory.retrieveUser().then(function() {
         $scope.userData = $scope.dataFactory.userInfo();
         //console.log($scope.userData);
@@ -25,19 +29,27 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function(
         $scope.thoughts = $scope.visions.thoughts;
 
         $scope.travels = $scope.visions.travel;
+        //console.log($scope.travels[0].travel);
 
         $scope.current_objectives = $scope.visions.current_career;
         $scope.future_objectives = $scope.visions.future_career;
 
+        $scope.location = $scope.travels[0].travel;
+
+        //console.log($scope.location);
+
+        getImage();
     });
 
     //API Call
-    $scope.dataFactory.getImg().then(function() {
-        $scope.imgInfo = $scope.dataFactory.gettyInfo();
-        console.log($scope.imgInfo);
+    function getImage() {
+        $scope.dataFactory.getImg($scope.location).then(function() {
+            $scope.imgInfo = $scope.dataFactory.gettyInfo();
+            console.log($scope.imgInfo);
 
-        $scope.imgLink = $scope.imgInfo[0].display_sizes[0].uri;
-        console.log($scope.imgLink);
-    });
+            $scope.imgLink = $scope.imgInfo[0].display_sizes[0].uri;
+            console.log($scope.imgLink);
+        });
+    }
 
 }]);
