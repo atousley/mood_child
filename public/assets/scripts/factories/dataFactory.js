@@ -2,10 +2,19 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
 
     var userData = undefined;
     var gettyImg = undefined;
+    var quote = '~im an inspirational quote~';
 
     var getImg = function(location) {
         var promise = $http.get('/place/' + location).then(function(response) {
             gettyImg = response.data;
+        });
+        return promise;
+    };
+
+    var getQuote = function() {
+      console.log('data factory get quote firing');
+        var promise = $http.get('/quote').then(function(response) {
+            quote = response.data;
         });
         return promise;
     };
@@ -46,6 +55,13 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
 
         getImg: function(location) {
             return getImg(location);
+        },
+
+        retrieveQuote: function() {
+            return getQuote();
+        },
+        randomQuote: function() {
+            return quote;
         }
 
     };

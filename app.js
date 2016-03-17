@@ -11,6 +11,7 @@ var session = require('express-session');
 var user = require('./routes/user');
 var edit = require('./routes/edit');
 var place = require('./routes/place');
+var quote = require('./routes/quote');
 
 
 app.use(bodyParser.json());
@@ -34,6 +35,7 @@ app.use(passport.session());
 app.use('/user', user);
 app.use('/edit', edit);
 app.use('/place', place);
+app.use('/quote', quote);
 
 // Serve back static files
 app.use(express.static('public'));

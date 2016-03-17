@@ -31,11 +31,12 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function(
         $scope.location = $scope.travels[0].travel;
 
 
-        getImage();
+        postImage();
+        postQuote();
     });
 
-    //API Call
-    function getImage() {
+    //Getty API Call
+    function postImage() {
         var randomImg = Math.floor((Math.random() * 50) + 1);
 
         $scope.dataFactory.getImg($scope.location).then(function() {
@@ -45,4 +46,11 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function(
         });
     }
 
+    //STANDS4 API Call
+    function postQuote() {
+        $scope.dataFactory.retrieveQuote();
+        //    .then(function () {
+        //    $scope.quote = $scope.dataFactory.randomQuote();
+        //});
+    }
 }]);
