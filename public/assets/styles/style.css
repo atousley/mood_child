@@ -104,6 +104,12 @@ a:hover {
     font-size: 100%;
 }
 
+.quote_section {
+    padding-top: 1%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
 .main_section {
     display: flex;
@@ -279,4 +285,24 @@ textarea, input[type] {
 
 #save:hover {
     text-decoration: underline;
+}
+
+/*ARCHIVES*/
+#archives_form {
+    display: block;
+    margin: 2% 0 1% 0;
+    padding: .5% 0;
+    /*justify-content: center;*/
+    text-align: center;
+}
+
+.show_vision {
+    background-color: #edecec;
+    /*text-decoration: underline;*/
+    margin: 2% auto 2%;
+    font-size: 70%;
+}
+
+.show_vision:hover {
+    font-weight: bold;
 }
