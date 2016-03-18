@@ -1,5 +1,7 @@
 myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function($scope, DataFactory, $http) {
 
+    //look into interaction that can happen with the books section
+
     $scope.dataFactory = DataFactory;
 
     $scope.location = 'france';

@@ -306,3 +306,5 @@ textarea, input[type] {
 .show_vision:hover {
     font-weight: bold;
 }
+
+/*incorporate a background image where the tiles scroll up over it as a watermark*/

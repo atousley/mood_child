@@ -4,6 +4,7 @@ var getty = require('../node_modules/gettyimages-api');
 var credentials = require('./creds');
 var client = new getty (credentials);
 
+//include method to pass in each location from top-5 when clicked on
 
 router.get('/:location' , function(req, res) {
     var location = req.params.location;
