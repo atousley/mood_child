@@ -29,9 +29,9 @@ body {
 .register, .login {
     display: inline-block;
     border: 1px solid;
-    width: 40%;
+    width: 30%;
     padding: 1%;
-    margin: 1%;
+    margin: 3%;
 }
 
 .login #username, .login #password,
@@ -61,8 +61,8 @@ body {
 .nav_main li {
     list-style-type: none;
     display: inline;
-    margin: .5% .5% 0 1%;
-    font-size: 80%;
+    margin: 1% .5% 0 1%;
+    font-size: 90%;
 }
 
 a {
@@ -83,14 +83,11 @@ a:hover {
 
 /*BOARD VIEW*/
 .vision_board {
-    /*margin: 1% 5% 1% 5%;*/
     background-color: #edecec;
 }
 
 .current_book, .reading_list,
 .delight, .thoughts, .travel {
-    /*border: 1px solid;*/
-    /*margin: .5%;*/
     padding: 1%;
     background-color: white;
 }
@@ -114,7 +111,7 @@ a:hover {
 .main_section {
     display: flex;
     justify-content: center;
-    width: 100%;
+    margin: .5% 3%;
 }
 
 .left_section, .right_section {
@@ -147,7 +144,7 @@ a:hover {
 .career {
     display: inline-block;
     width: 96%;
-    margin: 1%;
+    margin: 0 4% 2% 4%;
     padding: 1%;
     background-color: white;
     justify-content: center;
@@ -179,7 +176,6 @@ a:hover {
 
 #current_book, #reading_list,
 #delight, #thoughts, #travel {
-    /*border: 1px solid;*/
     margin: .5%;
     padding: .5% 2%;
     background-color: white;
@@ -196,7 +192,7 @@ a:hover {
 
 #main_section {
     display: flex;
-    margin: 1%;
+    margin: 1% 4%;
     justify-content: center;
 }
 
@@ -228,6 +224,7 @@ a:hover {
     width: 96%;
     background-color: white;
     padding-bottom: 1%;
+    margin: 0 5% 0 4%;
 }
 
 #career h2 {
@@ -280,7 +277,6 @@ textarea, input[type] {
     margin: 2% auto 2%;
     width: 100%;
     font-size: 150%;
-    /*border-top: 1px solid;*/
 }
 
 #save:hover {
@@ -292,15 +288,18 @@ textarea, input[type] {
     display: block;
     margin: 2% 0 1% 0;
     padding: .5% 0;
-    /*justify-content: center;*/
     text-align: center;
+}
+
+#archives_form label {
+    padding-right: .5%;
 }
 
 .show_vision {
     background-color: #edecec;
-    /*text-decoration: underline;*/
     margin: 2% auto 2%;
     font-size: 70%;
+    padding: .5%;
 }
 
 .show_vision:hover {
