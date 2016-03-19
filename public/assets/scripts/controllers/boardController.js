@@ -48,11 +48,11 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function(
         });
     }
 
-    //STANDS4 API Call
+    //Forismatic API Call
     function postQuote() {
-        $scope.dataFactory.retrieveQuote();
-        //    .then(function () {
-        //    $scope.quote = $scope.dataFactory.randomQuote();
-        //});
+        $scope.dataFactory.retrieveQuote().then(function() {
+            $scope.quoteInfo = $scope.dataFactory.randomQuote();
+            console.log('quoteInfo', $scope.quoteInfo);
+        });
     }
 }]);
