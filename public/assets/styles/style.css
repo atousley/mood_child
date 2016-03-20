@@ -102,10 +102,12 @@ a:hover {
 }
 
 .quote_section {
-    padding-top: 1%;
+    margin: 0 6% 0 6%;
+    padding: 3% 0 1% 0;
     display: flex;
     justify-content: center;
-    width: 100%;
+    /*background-color: #D9EDE0;*/
+    /*width: 100%;*/
 }
 
 .main_section {

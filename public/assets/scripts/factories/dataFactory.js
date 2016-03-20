@@ -12,10 +12,8 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
     };
 
     var getQuote = function() {
-      console.log('data factory get quote firing');
         var promise = $http.get('/quote').then(function(response) {
             quote = response.data;
-            //console.log(quote);
         });
         return promise;
     };
