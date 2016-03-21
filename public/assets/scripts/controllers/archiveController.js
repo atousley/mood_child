@@ -6,16 +6,13 @@ myApp.controller('ArchiveController', ['$scope', 'DataFactory', '$http', '$filte
 
     $scope.dataFactory.retrieveUser().then(function() {
         $scope.userData = $scope.dataFactory.userInfo();
-        //console.log($scope.userData);
         $scope.archives = $scope.userData.visionboard;
-        //console.log($scope.archives);
     });
 
     $scope.showVision = function() {
         $scope.showBoard = true;
 
         $scope.selectedVision = $scope.archive;
-        //console.log($scope.selectedVision);
 
         $scope.current_book = $scope.selectedVision.current_book;
 

@@ -20,13 +20,10 @@ myApp.config(['$routeProvider', function($routeProvider) {
         });
 }]);
 
-myApp.controller('UserController', ['$scope', 'DataFactory', '$http', '$window', function($scope, DataFactory, $http, $window) {
-    $scope.userName;
-
+myApp.controller('UserController', ['$scope', 'DataFactory', '$http', '$window', function($scope, DataFactory) {
     $scope.dataFactory = DataFactory;
 
     $scope.dataFactory.retrieveUser().then(function() {
         $scope.user = $scope.dataFactory.userInfo().username;
     });
-
 }]);

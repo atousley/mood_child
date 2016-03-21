@@ -45,14 +45,16 @@ body {
     border: 1px solid;
     width: 30%;
     padding: 1%;
-    margin: 2% 3% 35% 3%;
+    margin: 2% 3% 31% 3%;
 }
 
 .login #username, .login #password,
 .register #username, .register #password {
     border: 1px solid;
-    width: 60%;
+    width: 50%;
     padding: .5%;
+    margin: 1%;
+    outline: none;
 }
 
 #submit {
@@ -120,8 +122,6 @@ a:hover {
     padding: 3% 0 1% 0;
     display: flex;
     justify-content: center;
-    /*background-color: #D9EDE0;*/
-    /*width: 100%;*/
 }
 
 .main_section {
@@ -168,8 +168,6 @@ a:hover {
     padding: 1%;
     background-color: white;
     justify-content: center;
-    /*border: 3px solid #D9EDE0;*/
-
 }
 
 .career h2 {
@@ -280,7 +278,6 @@ a:hover {
     margin: 1%;
     width: 75%;
     outline: none;
-    /*padding-bottom: .5%;*/
 }
 
 #left_section input {
@@ -326,6 +323,10 @@ textarea, input[type] {
 
 #archives_form label {
     padding-right: .5%;
+}
+
+#archives_form #archive_dropdown {
+    outline: none;
 }
 
 .show_vision {

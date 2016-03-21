@@ -2,8 +2,8 @@
 <div class="vision_board">
 <form id="archives_form">
     <label>Find Vision From:</label>
-    <select ng-model="archive" ng-options="date.date | date for date in archives">
-        <option  value="">---Select---</option>
+    <select id="archive_dropdown" ng-model="archive" ng-options="date.date | date for date in archives">
+        <option value="">---Select---</option>
     </select>
 
     <button class="show_vision" ng-click="showVision()">Show Board</button>

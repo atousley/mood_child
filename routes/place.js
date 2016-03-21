@@ -8,7 +8,6 @@ var client = new getty (credentials);
 
 router.get('/:location' , function(req, res) {
     var location = req.params.location;
-    //console.log(location);
     client.search().images().creative().withResponseField('comp').withGraphicalStyle('photography')
         .withPageSize(50).withPhrase('travel' + ' ' + location)
         .execute(function(err, response) {
