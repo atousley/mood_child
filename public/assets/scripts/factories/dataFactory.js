@@ -2,7 +2,7 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
 
     var userData = undefined;
     var gettyImg = undefined;
-    var quote = '~im an inspirational quote~';
+    //var quote = '~im an inspirational quote~';
 
     var getImg = function(location) {
         var promise = $http.get('/place/' + location).then(function(response) {
