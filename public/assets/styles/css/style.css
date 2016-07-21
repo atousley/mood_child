@@ -99,13 +99,14 @@ a:hover {
 
 /*BOARD VIEW*/
 .vision_board {
-    background-color: #edecec;
+    background-color: #198080;
 }
 
 .current_book, .reading_list,
 .delight, .thoughts, .travel {
     padding: 1%;
     background-color: white;
+    border: 2px solid;
 }
 
 .current_book h2, .reading_list h2,
@@ -150,10 +151,13 @@ a:hover {
 
 .travel_api img {
    width: 100%;
+    border: 2px solid;
 }
 
 .book_img img {
     width: 100%;
+    border: 2px solid;
+
 }
 
 .bottom_section {
@@ -168,6 +172,7 @@ a:hover {
     padding: 1%;
     background-color: white;
     justify-content: center;
+    border: 2px solid;
 }
 
 .career h2 {
@@ -192,7 +197,7 @@ a:hover {
 #vision_board {
     border-top: 1px solid;
     border-bottom: 1px solid;
-    background-color:#edecec;
+    background-color: #B2D4D4;
 }
 
 #current_book, #reading_list,
@@ -200,7 +205,7 @@ a:hover {
     margin: .5%;
     padding: .5% 2%;
     background-color: white;
-    border: 3px solid #D9EDE0;
+    border: 2px solid;
 }
 
 #current_book h2, #reading_list h2,
@@ -247,7 +252,7 @@ a:hover {
     padding: .5% 2%;
     margin: 0 5% 3% 4%;
     background-color: white;
-    border: 3px solid #D9EDE0;
+    border: 3px solid;
 }
 
 #career h2 {
@@ -271,6 +276,7 @@ a:hover {
     margin: 1%;
     width: 90%;
     outline: none;
+    color: #585858;
 }
 
 #travel input {
@@ -278,10 +284,12 @@ a:hover {
     margin: 1%;
     width: 75%;
     outline: none;
+    color: #585858;
 }
 
 #left_section input {
     outline: none;
+    color: #585858;
 }
 
 textarea, input[type] {
