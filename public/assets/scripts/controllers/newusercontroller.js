@@ -1,4 +1,4 @@
-myApp.controller('NewUserController', ['$scope', '$location', function($scope, $location) {
+myApp.controller('NewUserController', ['$scope', '$window', function($scope, $window) {
 
 //this might not end up being needed it the future if new users don't need additional action
 
@@ -7,7 +7,9 @@ myApp.controller('NewUserController', ['$scope', '$location', function($scope, $
 
         console.log('i work ok?');
 
-        $location.path('/board');
+        $window.location.href = '/board.html';
+
+        //$location.path('board');
 
     }
 
