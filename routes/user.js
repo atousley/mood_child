@@ -17,7 +17,7 @@ router.post('/register', function(req, res, next) {
         if(err) {
             next(err);
         } else {
-            res.redirect('/views/templates/newuser.html');
+            res.redirect('/views/newuser.html');
         }
     });
 });

@@ -2,6 +2,7 @@ Time frame:
 SOW Approved 03/08/16
 Deliverables 03/18/16
 Presentation 03/21/16
+Ongoing Maintenance - September 2016
 
 Scope of Work Feature Details
 This application is a designed to be an online vision board for individuals.

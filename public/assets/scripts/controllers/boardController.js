@@ -52,7 +52,7 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function(
     function postQuote() {
         $scope.dataFactory.retrieveQuote().then(function() {
             $scope.quoteInfo = $scope.dataFactory.randomQuote();
-            console.log('quoteInfo', $scope.quoteInfo);
+            //console.log('quoteInfo', $scope.quoteInfo);
             $scope.quote = $scope.quoteInfo.quoteText;
             if ($scope.quoteInfo.quoteAuthor == '') {
                 $scope.author = 'Unknown';

@@ -15,10 +15,10 @@ myApp.config(['$routeProvider', function($routeProvider) {
             templateUrl: '/views/templates/archive.html',
             controller: 'ArchiveController'
         })
-        .when('/newuser', {
-            templateUrl: '/views/templates/newuser.html',
-            controller: 'NewUserController'
-        })
+        //.when('/newuser', {
+        //    templateUrl: '/views/templates/newuser.html',
+        //    controller: 'NewUserController'
+        //})
         .otherwise({
             redirectTo: 'board'
         });

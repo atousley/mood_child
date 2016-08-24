@@ -1,17 +1,13 @@
 myApp.controller('NewUserController', ['$scope', '$window', function($scope, $window) {
 
-//this might not end up being needed it the future if new users don't need additional action
-
-
     $scope.reroute = function() {
 
-        console.log('i work ok?');
+        console.log('i work');
 
-        $window.location.href = '/board.html';
+        //this redirect works but needs handling for when users don't yet have data
+        //$window.location.href = '/views/user.html';
 
-        //$location.path('board');
-
-    }
+    };
 
 
 }]);
