@@ -1,4 +1,4 @@
-myApp.controller('EditController', ['$scope', 'DataFactory', '$http', '$location', function($scope, DataFactory, $http, $location) {
+myApp.controller('EditController', ['$scope', 'DataFactory', '$http', '$location', '$q', function($scope, DataFactory, $http, $location, $q) {
 
     $scope.dataFactory = DataFactory;
 
@@ -111,10 +111,12 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', '$location
 
         };
 
-        $scope.dataFactory.sendVision(vision);
-        //    .then(function() {
-        //    $location.path('/board')
-        //});
+        $q.when($scope.dataFactory.sendVision(vision)).then(function() {
+
+            $location.path('/board');
+            //this still doesn't refresh the page
+
+        });
     }
 
 }]);
