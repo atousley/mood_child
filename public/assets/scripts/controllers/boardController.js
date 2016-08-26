@@ -1,4 +1,4 @@
-myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function($scope, DataFactory, $http) {
+myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', '$location', function($scope, DataFactory, $http, $location) {
 
     //look into interaction that can happen with the books section
 
@@ -10,31 +10,37 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', function(
 
     $scope.dataFactory.retrieveUser().then(function() {
         $scope.userData = $scope.dataFactory.userInfo();
+        //console.log($scope.userData);
 
-        $scope.visionboard = $scope.userData.visionboard;
+        if ($scope.userData.visionboard.length === 0) {
+            $location.path('/edit');
+        }
+        else {
+            $scope.visionboard = $scope.userData.visionboard;
 
-        $scope.currentVision = $scope.visionboard.length - 1;
+            $scope.currentVision = $scope.visionboard.length - 1;
 
-        $scope.visions = $scope.visionboard[$scope.currentVision];
+            $scope.visions = $scope.visionboard[$scope.currentVision];
 
-        $scope.current_book = $scope.visions.current_book;
+            $scope.current_book = $scope.visions.current_book;
 
-        $scope.readingList = $scope.visions.reading_list;
+            $scope.readingList = $scope.visions.reading_list;
 
-        $scope.delights = $scope.visions.delight;
+            $scope.delights = $scope.visions.delight;
 
-        $scope.thoughts = $scope.visions.thoughts;
+            $scope.thoughts = $scope.visions.thoughts;
 
-        $scope.travels = $scope.visions.travel;
+            $scope.travels = $scope.visions.travel;
 
-        $scope.current_objectives = $scope.visions.current_career;
-        $scope.future_objectives = $scope.visions.future_career;
+            $scope.current_objectives = $scope.visions.current_career;
+            $scope.future_objectives = $scope.visions.future_career;
 
-        $scope.location = $scope.travels[0].travel;
+            $scope.location = $scope.travels[0].travel;
 
+            postImage();
+            postQuote();
+        }
 
-        postImage();
-        postQuote();
     });
 
     //Getty API Call

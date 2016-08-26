@@ -1,58 +1,68 @@
-myApp.controller('EditController', ['$scope', 'DataFactory', '$http', function($scope, DataFactory, $http) {
+myApp.controller('EditController', ['$scope', 'DataFactory', '$http', '$location', function($scope, DataFactory, $http, $location) {
 
     $scope.dataFactory = DataFactory;
 
     $scope.dataFactory.retrieveUser().then(function() {
+
         $scope.userData = $scope.dataFactory.userInfo();
+        //console.log($scope.userData);
 
-        $scope.visionboard = $scope.userData.visionboard;
+        if ($scope.userData.visionboard.length === 0) {
+            alert("It's your first board!!! Go to town!!");
+            //write in an iframe here, alerts are lame!
+        }
+        else {
+            $scope.visionboard = $scope.userData.visionboard;
 
-        $scope.currentVision = $scope.visionboard.length - 1;
+            $scope.currentVision = $scope.visionboard.length - 1;
 
-        $scope.visions = $scope.visionboard[$scope.currentVision];
+            $scope.visions = $scope.visionboard[$scope.currentVision];
 
-        $scope.title = $scope.visions.current_book.title;
-        $scope.author = $scope.visions.current_book.author;
-        $scope.title1 = $scope.visions.reading_list[0].title;
-        $scope.author1 = $scope.visions.reading_list[0].author;
-        $scope.title2 = $scope.visions.reading_list[1].title;
-        $scope.author2 = $scope.visions.reading_list[1].author;
-        $scope.title3 = $scope.visions.reading_list[2].title;
-        $scope.author3 = $scope.visions.reading_list[2].author;
-        $scope.title4 = $scope.visions.reading_list[3].title;
-        $scope.author4 = $scope.visions.reading_list[3].author;
-        $scope.title5 = $scope.visions.reading_list[4].title;
-        $scope.author5 = $scope.visions.reading_list[4].author;
+            $scope.title = $scope.visions.current_book.title;
+            $scope.author = $scope.visions.current_book.author;
+            $scope.title1 = $scope.visions.reading_list[0].title;
+            $scope.author1 = $scope.visions.reading_list[0].author;
+            $scope.title2 = $scope.visions.reading_list[1].title;
+            $scope.author2 = $scope.visions.reading_list[1].author;
+            $scope.title3 = $scope.visions.reading_list[2].title;
+            $scope.author3 = $scope.visions.reading_list[2].author;
+            $scope.title4 = $scope.visions.reading_list[3].title;
+            $scope.author4 = $scope.visions.reading_list[3].author;
+            $scope.title5 = $scope.visions.reading_list[4].title;
+            $scope.author5 = $scope.visions.reading_list[4].author;
 
-        $scope.delight1 = $scope.visions.delight[0].delight;
-        $scope.delight2 = $scope.visions.delight[1].delight;
-        $scope.delight3 = $scope.visions.delight[2].delight;
-        $scope.delight4 = $scope.visions.delight[3].delight;
-        $scope.delight5 = $scope.visions.delight[4].delight;
-        $scope.delight6 = $scope.visions.delight[5].delight;
-        $scope.delight7 = $scope.visions.delight[6].delight;
-        $scope.delight8 = $scope.visions.delight[7].delight;
+            $scope.delight1 = $scope.visions.delight[0].delight;
+            $scope.delight2 = $scope.visions.delight[1].delight;
+            $scope.delight3 = $scope.visions.delight[2].delight;
+            $scope.delight4 = $scope.visions.delight[3].delight;
+            $scope.delight5 = $scope.visions.delight[4].delight;
+            $scope.delight6 = $scope.visions.delight[5].delight;
+            $scope.delight7 = $scope.visions.delight[6].delight;
+            $scope.delight8 = $scope.visions.delight[7].delight;
 
-        $scope.thought1 = $scope.visions.thoughts[0].thought;
-        $scope.thought2 = $scope.visions.thoughts[1].thought;
-        $scope.thought3 = $scope.visions.thoughts[2].thought;
-        $scope.thought4 = $scope.visions.thoughts[3].thought;
+            $scope.thought1 = $scope.visions.thoughts[0].thought;
+            $scope.thought2 = $scope.visions.thoughts[1].thought;
+            $scope.thought3 = $scope.visions.thoughts[2].thought;
+            $scope.thought4 = $scope.visions.thoughts[3].thought;
 
-        $scope.travel1 = $scope.visions.travel[0].travel;
-        $scope.travel2 = $scope.visions.travel[1].travel;
-        $scope.travel3 = $scope.visions.travel[2].travel;
-        $scope.travel4 = $scope.visions.travel[3].travel;
-        $scope.travel5 = $scope.visions.travel[4].travel;
+            $scope.travel1 = $scope.visions.travel[0].travel;
+            $scope.travel2 = $scope.visions.travel[1].travel;
+            $scope.travel3 = $scope.visions.travel[2].travel;
+            $scope.travel4 = $scope.visions.travel[3].travel;
+            $scope.travel5 = $scope.visions.travel[4].travel;
 
-        $scope.current_career1 = $scope.visions.current_career[0].objective;
-        $scope.current_career2 = $scope.visions.current_career[1].objective;
-        $scope.current_career3 = $scope.visions.current_career[2].objective;
+            $scope.current_career1 = $scope.visions.current_career[0].objective;
+            $scope.current_career2 = $scope.visions.current_career[1].objective;
+            $scope.current_career3 = $scope.visions.current_career[2].objective;
 
-        $scope.future_career1 = $scope.visions.future_career[0].objective;
-        $scope.future_career2 = $scope.visions.future_career[1].objective;
-        $scope.future_career3 = $scope.visions.future_career[2].objective;
-        $scope.future_career4 = $scope.visions.future_career[3].objective;
-        $scope.future_career5 = $scope.visions.future_career[4].objective;
+            $scope.future_career1 = $scope.visions.future_career[0].objective;
+            $scope.future_career2 = $scope.visions.future_career[1].objective;
+            $scope.future_career3 = $scope.visions.future_career[2].objective;
+            $scope.future_career4 = $scope.visions.future_career[3].objective;
+            $scope.future_career5 = $scope.visions.future_career[4].objective;
+        }
+
+
     });
 
 
@@ -102,6 +112,9 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', function($
         };
 
         $scope.dataFactory.sendVision(vision);
+        //    .then(function() {
+        //    $location.path('/board')
+        //});
     }
 
 }]);
