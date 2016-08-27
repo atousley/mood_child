@@ -1,4 +1,5 @@
-myApp.controller('EditController', ['$scope', 'DataFactory', '$http', '$location', '$q', function($scope, DataFactory, $http, $location, $q) {
+myApp.controller('EditController', ['$scope', 'DataFactory', '$http', '$location', '$q', '$route',
+    function($scope, DataFactory, $http, $location, $q, $route) {
 
     $scope.dataFactory = DataFactory;
 
@@ -114,6 +115,7 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', '$location
         $q.when($scope.dataFactory.sendVision(vision)).then(function() {
 
             $location.path('/board');
+            $route.reload();
             //this still doesn't refresh the page
 
         });

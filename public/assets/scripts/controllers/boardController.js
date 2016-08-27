@@ -38,6 +38,7 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', '$locatio
             $scope.location = $scope.travels[0].travel;
 
             postImage();
+            //add an if statement around this to have a default image appear if there isn't travel info yet
             postQuote();
         }
 
