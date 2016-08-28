@@ -116,7 +116,6 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', '$location
 
             $location.path('/board');
             $route.reload();
-            //this still doesn't refresh the page
 
         });
     }
