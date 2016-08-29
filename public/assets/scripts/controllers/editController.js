@@ -113,6 +113,7 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', '$location
         };
 
         $q.when($scope.dataFactory.sendVision(vision)).then(function() {
+           //the $q.when can be removed if you return the promise in the factory
 
             $location.path('/board');
             $route.reload();

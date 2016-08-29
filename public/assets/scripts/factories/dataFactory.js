@@ -21,6 +21,7 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
     var postVision = function(data) {
         $http.post('/edit/' + id, data).then(function(response) {
         });
+        //This promise is local, return it if you don't want to use $q.when
     };
 
     var getUser = function() {
