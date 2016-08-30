@@ -1,13 +1,11 @@
 myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', '$location', function($scope, DataFactory, $http, $location) {
 
-    //look into interaction that can happen with the books section
-
     $scope.dataFactory = DataFactory;
 
     $scope.location = 'france';
 
-    $scope.backup = 'http://s1.ibtimes.com/sites/www.ibtimes.com/files/2015/05/18/memorial-day-travel.jpg';
-    //make this a file rather than a website in the future
+    $scope.backup = '../images/vwbus.jpg';
+    //add photo credit on front end within if statement or link: http://www.richardgottardo.com/willy-nilly/wil1/
 
     $scope.dataFactory.retrieveUser().then(function() {
         $scope.userData = $scope.dataFactory.userInfo();
