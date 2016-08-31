@@ -49,6 +49,7 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', '$locatio
 
         if ($scope.location == undefined) {
             $scope.imgLink = $scope.backup;
+            $scope.photo_credit = "Photo via: http://www.richardgottardo.com/";
         }
         else {
             var randomImg = Math.floor((Math.random() * 50) + 1);
