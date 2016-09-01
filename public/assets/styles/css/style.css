@@ -150,8 +150,13 @@ a:hover {
 }
 
 .travel_api img {
-   width: 100%;
+    width: 100%;
     border: 2px solid;
+}
+
+.travel_api figcaption {
+    font-size: 50%;
+    text-align: center;
 }
 
 .book_img img {
