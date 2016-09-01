@@ -24,6 +24,7 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', '$locatio
 
             $scope.current_book = $scope.visions.current_book;
 
+            //add an if statement around this to remove and add the commas dynamically with the number of books
             $scope.readingList = $scope.visions.reading_list;
 
             $scope.delights = $scope.visions.delight;
