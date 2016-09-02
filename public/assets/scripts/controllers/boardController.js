@@ -25,7 +25,19 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', '$locatio
             $scope.current_book = $scope.visions.current_book;
 
             //add an if statement around this to remove and add the commas dynamically with the number of books
+           console.log($scope.visions.reading_list);
             $scope.readingList = $scope.visions.reading_list;
+            console.log($scope.readingList);
+            console.log($scope.readingList.title);
+
+            for (var i = 0; i < $scope.readingList.length; i++)  {
+
+                if ($scope.readingList[i].title && $scope.readingList[i].author != undefined)
+                {
+                    $scope.comma = ", ";
+                    //this doesn't work yet, need to set [i] on each and then set comma
+                }
+            }
 
             $scope.delights = $scope.visions.delight;
 
