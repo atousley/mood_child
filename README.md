@@ -53,3 +53,11 @@ Vision Board View:
 of quote that will appear (API).
 - Archives view where users can access the state of their vision
 board for a specific month and year.
+
+
+//Additional Considerations and Goals for this project post-presentation:
+- Dynamically adding (up to a certain number) all fields
+- Hosting on Heroku
+- Allowing users to choose which sections appear on their board
+- Allowing users to choose themes and photos to customize their board
+- Export to PDF feature
