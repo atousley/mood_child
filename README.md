@@ -56,7 +56,8 @@ board for a specific month and year.
 
 
 //Additional Considerations and Goals for this project post-presentation:
-- Dynamically adding (up to a certain number) all fields
+- Log-out
+- Dynamically adding (up to a certain number) all field entries
 - Hosting on Heroku
 - Allowing users to choose which sections appear on their board
 - Allowing users to choose themes and photos to customize their board
