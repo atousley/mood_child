@@ -45,6 +45,12 @@ app.use(express.static('public/assets/scripts'));
 app.use(express.static('public/assets/styles'));
 app.use(express.static('public/vendors'));
 
+
+app.get('/logout', function(req, res){
+    req.logout();
+    res.redirect('/');
+});
+
 // Mongo Connection //
 var mongoURI = "mongodb://localhost:27017/moon_child";
 

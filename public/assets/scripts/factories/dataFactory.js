@@ -38,10 +38,10 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
 
     var logoutUser = function() {
         console.log('hits top of data fac');
-      $http.get('/logout').then(function(){
+     var promise = $http.get('/logout').then(function(response){
           console.log('back from server in top of data fac');
       });
-
+        return promise;
     };
 
     var publicApi = {

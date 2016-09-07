@@ -24,7 +24,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
         });
 }]);
 
-myApp.controller('UserController', ['$scope', 'DataFactory', '$http', '$window', function($scope, DataFactory) {
+myApp.controller('UserController', ['$scope', 'DataFactory', '$http', '$window', function($scope, DataFactory, $window) {
     $scope.dataFactory = DataFactory;
 
     $scope.dataFactory.retrieveUser().then(function() {
@@ -33,11 +33,10 @@ myApp.controller('UserController', ['$scope', 'DataFactory', '$http', '$window',
 
     $scope.clientClickLogout = function() {
         console.log('Nav Controller for Logout working');
-        $scope.dataFactory.userLogoutReq();
-            //.then(function() {
-            //console.log('back from factory');
-            // redirectTo: index;
-        //})
+        $scope.dataFactory.userLogoutReq().then(function() {
+            console.log('back from factory');
+            $window.location.href = 'views/index.html';
+        })
     }
 
 }]);

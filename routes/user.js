@@ -35,17 +35,5 @@ router.get('/', function(req, res) {
     }
 });
 
-//Sample logout
-//app.get('/logout', function(req, res){
-//    req.logout();
-//    res.redirect('/');
-//});
-
-router.get('/logout', function(req, res){
-    console.log('hits server route');
-    req.logout();
-    res.redirect('/index.html');
-});
-
 
 module.exports = router;
