@@ -47,8 +47,9 @@ app.use(express.static('public/vendors'));
 
 
 app.get('/logout', function(req, res){
+    //console.log('hits server');
     req.logout();
-    res.redirect('/');
+    res.redirect('index.html');
 });
 
 // Mongo Connection //

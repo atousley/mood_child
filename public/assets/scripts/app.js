@@ -32,10 +32,9 @@ myApp.controller('UserController', ['$scope', 'DataFactory', '$http', '$window',
     });
 
     $scope.clientClickLogout = function() {
-        console.log('Nav Controller for Logout working');
+        //console.log('Nav Controller for Logout working');
         $scope.dataFactory.userLogoutReq().then(function() {
-            console.log('back from factory');
-            $window.location.href = 'views/index.html';
+            //console.log('back from factory');
         })
     }
 

@@ -39,7 +39,8 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
     var logoutUser = function() {
         console.log('hits top of data fac');
      var promise = $http.get('/logout').then(function(response){
-          console.log('back from server in top of data fac');
+          //console.log('back from server in top of data fac');
+         $window.location.href = '/index.html';
       });
         return promise;
     };
