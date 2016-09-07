@@ -57,6 +57,7 @@ board for a specific month and year.
 
 //Additional Considerations and Goals for this project post-presentation:
 - Log-out
+- Error handling for wrong user name and password AND password reset
 - Dynamically adding (up to a certain number) all field entries
 - Hosting on Heroku
 - Allowing users to choose which sections appear on their board
