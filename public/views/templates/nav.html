@@ -1,4 +1,4 @@
-<div class="nav_main">
+<div class="nav_main" ng-controller="UserController">
 
     <!--need to add a log out option!-->
 
@@ -6,7 +6,7 @@
         <li><a href="#board">My Board</a></li>
         <li><a href="#edit">Edit</a></li>
         <li><a href="#archive">Archive</a></li>
-        <!--<li><a href="">Log Out</a></li>-->
+        <li><a ng-click="clientClickLogout()">Log Out</a></li>
     </ul>
 
     <h1>Moon Child</h1>

@@ -30,4 +30,14 @@ myApp.controller('UserController', ['$scope', 'DataFactory', '$http', '$window',
     $scope.dataFactory.retrieveUser().then(function() {
         $scope.user = $scope.dataFactory.userInfo().username;
     });
+
+    $scope.clientClickLogout = function() {
+        console.log('Nav Controller for Logout working');
+        $scope.dataFactory.userLogoutReq();
+            //.then(function() {
+            //console.log('back from factory');
+            // redirectTo: index;
+        //})
+    }
+
 }]);

@@ -36,6 +36,14 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
         return promise;
     };
 
+    var logoutUser = function() {
+        console.log('hits top of data fac');
+      $http.get('/logout').then(function(){
+          console.log('back from server in top of data fac');
+      });
+
+    };
+
     var publicApi = {
         userInfo: function() {
             return userData;
@@ -62,6 +70,10 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
         },
         randomQuote: function() {
             return quote;
+        },
+
+        userLogoutReq: function() {
+            return logoutUser();
         }
 
     };

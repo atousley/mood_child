@@ -41,5 +41,11 @@ router.get('/', function(req, res) {
 //    res.redirect('/');
 //});
 
+router.get('/logout', function(req, res){
+    console.log('hits server route');
+    req.logout();
+    res.redirect('/index.html');
+});
+
 
 module.exports = router;
