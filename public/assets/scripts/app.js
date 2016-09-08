@@ -15,16 +15,12 @@ myApp.config(['$routeProvider', function($routeProvider) {
             templateUrl: '/views/templates/archive.html',
             controller: 'ArchiveController'
         })
-        //.when('/newuser', {
-        //    templateUrl: '/views/templates/newuser.html',
-        //    controller: 'NewUserController'
-        //})
         .otherwise({
             redirectTo: 'board'
         });
 }]);
 
-myApp.controller('UserController', ['$scope', 'DataFactory', '$http', '$window', function($scope, DataFactory, $window) {
+myApp.controller('UserController', ['$scope', 'DataFactory', '$http',  function($scope, DataFactory) {
     $scope.dataFactory = DataFactory;
 
     $scope.dataFactory.retrieveUser().then(function() {
@@ -32,10 +28,8 @@ myApp.controller('UserController', ['$scope', 'DataFactory', '$http', '$window',
     });
 
     $scope.clientClickLogout = function() {
-        //console.log('Nav Controller for Logout working');
         $scope.dataFactory.userLogoutReq().then(function() {
-            //console.log('back from factory');
-        })
+        });
     }
 
 }]);

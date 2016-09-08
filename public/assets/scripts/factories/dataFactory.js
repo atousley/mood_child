@@ -4,6 +4,8 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
     var gettyImg = undefined;
     //var quote = '~im an inspirational quote~';
 
+
+    //Image and Quote
     var getImg = function(location) {
         var promise = $http.get('/place/' + location).then(function(response) {
             gettyImg = response.data;
@@ -16,14 +18,18 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
             quote = response.data;
         });
         return promise;
+        //Need to add error handling if API goes down. Local directory of random quotes?
     };
 
+
+    //Save New Vision Board Data
     var postVision = function(data) {
         $http.post('/edit/' + id, data).then(function(response) {
         });
         //This promise is local, return it if you don't want to use $q.when
     };
 
+    //Get User and Vision Board Data
     var getUser = function() {
         var promise = $http.get('/user').then(function(response) {
             if(response.data) {
@@ -36,15 +42,17 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
         return promise;
     };
 
+    //Logout User
     var logoutUser = function() {
         console.log('hits top of data fac');
      var promise = $http.get('/logout').then(function(response){
-          //console.log('back from server in top of data fac');
          $window.location.href = '/index.html';
       });
         return promise;
     };
 
+
+    //Public Function Connections
     var publicApi = {
         userInfo: function() {
             return userData;
