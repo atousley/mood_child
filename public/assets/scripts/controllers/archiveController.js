@@ -4,11 +4,14 @@ myApp.controller('ArchiveController', ['$scope', 'DataFactory', '$http', '$filte
 
     $scope.dataFactory = DataFactory;
 
+
+    //Gets all instances of users saved vision boards
     $scope.dataFactory.retrieveUser().then(function() {
         $scope.userData = $scope.dataFactory.userInfo();
         $scope.archives = $scope.userData.visionboard;
     });
 
+    //Show the vision board of the selected instance
     $scope.showVision = function() {
         $scope.showBoard = true;
 
@@ -17,6 +20,15 @@ myApp.controller('ArchiveController', ['$scope', 'DataFactory', '$http', '$filte
         $scope.current_book = $scope.selectedVision.current_book;
 
         $scope.readingList = $scope.selectedVision.reading_list;
+
+        for (var i = 0; i < $scope.readingList.length; i++)  {
+
+            if ($scope.readingList[i].title && $scope.readingList[i].author != undefined)
+            {
+                $scope.readingList[i].title += ", ";
+            }
+        }
+        //this doesn't work yet
 
         $scope.delights = $scope.selectedVision.delight;
 
@@ -32,6 +44,7 @@ myApp.controller('ArchiveController', ['$scope', 'DataFactory', '$http', '$filte
         getImage();
     };
 
+    //Random image function
     function getImage() {
         var randomImg = Math.floor((Math.random() * 50) + 1);
 
