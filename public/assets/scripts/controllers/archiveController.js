@@ -26,6 +26,7 @@ myApp.controller('ArchiveController', ['$scope', 'DataFactory', '$http', '$filte
             if ($scope.readingList[i].title && $scope.readingList[i].author != undefined)
             {
                 $scope.readingList[i].title += ", ";
+
             }
         }
         //this doesn't work yet
