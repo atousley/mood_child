@@ -25,11 +25,10 @@ myApp.controller('ArchiveController', ['$scope', 'DataFactory', '$http', '$filte
 
             if ($scope.readingList[i].title && $scope.readingList[i].author != undefined)
             {
+                //console.log($scope.readingList[i]);
                 $scope.readingList[i].title += ", ";
-
             }
         }
-        //this doesn't work yet
 
         $scope.delights = $scope.selectedVision.delight;
 
