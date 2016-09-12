@@ -24,10 +24,7 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', '$locatio
 
             $scope.current_book = $scope.visions.current_book;
 
-           //console.log($scope.visions.reading_list);
             $scope.readingList = $scope.visions.reading_list;
-            //console.log($scope.readingList);
-            //console.log($scope.readingList.title);
 
             for (var i = 0; i < $scope.readingList.length; i++)  {
 
@@ -47,7 +44,6 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', '$locatio
             $scope.future_objectives = $scope.visions.future_career;
 
             $scope.location = $scope.travels[0].travel;
-            //console.log('top travel', $scope.location);
 
             postImage();
             postQuote();
@@ -72,7 +68,7 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', '$locatio
         }
     }
 
-    //Forismatic API Call
+    //Forismatic API Call for a Random Quote
     function postQuote() {
         $scope.dataFactory.retrieveQuote().then(function() {
             $scope.quoteInfo = $scope.dataFactory.randomQuote();
@@ -84,5 +80,7 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', '$locatio
                 $scope.author = $scope.quoteInfo.quoteAuthor;
             }
         });
+
+        //need error handling here for if Forismatic goes down or errors
     }
 }]);
