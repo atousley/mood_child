@@ -9,7 +9,7 @@ myApp.controller('BoardController', ['$scope', 'DataFactory', '$http', '$locatio
 
     $scope.dataFactory.retrieveUser().then(function() {
         $scope.userData = $scope.dataFactory.userInfo();
-        //console.log($scope.userData);
+        console.log("user data in board controller:", $scope.userData);
 
         if ($scope.userData.visionboard.length === 0) {
             $location.path('/edit');

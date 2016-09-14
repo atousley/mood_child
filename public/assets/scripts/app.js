@@ -23,6 +23,8 @@ myApp.config(['$routeProvider', function($routeProvider) {
 myApp.controller('UserController', ['$scope', 'DataFactory', '$http',  function($scope, DataFactory) {
     $scope.dataFactory = DataFactory;
 
+    console.log('hit user controller');
+
     $scope.dataFactory.retrieveUser().then(function() {
         $scope.user = $scope.dataFactory.userInfo().username;
     });

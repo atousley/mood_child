@@ -6,7 +6,7 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', '$location
     $scope.dataFactory.retrieveUser().then(function() {
 
         $scope.userData = $scope.dataFactory.userInfo();
-        //console.log($scope.userData);
+        console.log($scope.userData);
 
         if ($scope.userData.visionboard.length === 0) {
             alert("It's your first board!!! Go to town!!");

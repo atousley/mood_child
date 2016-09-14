@@ -2,7 +2,8 @@ myApp.controller('NewUserController', ['$scope', '$window', '$location', functio
 
     //Button function to take newly registered users to the edit page from the welcome page
     $scope.reroute = function() {
-        $window.location.href = '/views/user.html';
+        console.log('in new user controller');
+        $window.location = 'user.html#/edit';
 
     };
 
