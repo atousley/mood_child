@@ -4,6 +4,7 @@ myApp.controller('ArchiveController', ['$scope', 'DataFactory', '$http', '$filte
 
     $scope.dataFactory = DataFactory;
 
+    $scope.backup = '../images/vwbus.jpg';
 
     //Gets all instances of users saved vision boards
     $scope.dataFactory.retrieveUser().then(function() {
@@ -40,7 +41,7 @@ myApp.controller('ArchiveController', ['$scope', 'DataFactory', '$http', '$filte
         $scope.future_objectives = $scope.selectedVision.future_career;
 
         $scope.location = $scope.travels[0].travel;
-        console.log($scope.location);
+        //console.log($scope.location);
 
         getImage();
     };
@@ -59,14 +60,6 @@ myApp.controller('ArchiveController', ['$scope', 'DataFactory', '$http', '$filte
                 $scope.imgLink = $scope.imgInfo[randomImg].display_sizes[0].uri;
             });
         }
-
-        //var randomImg = Math.floor((Math.random() * 50) + 1);
-        //
-        //$scope.dataFactory.getImg($scope.location).then(function() {
-        //    $scope.imgInfo = $scope.dataFactory.gettyInfo();
-        //
-        //    $scope.imgLink = $scope.imgInfo[randomImg].display_sizes[0].uri;
-        //});
     }
 
 }]);
