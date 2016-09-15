@@ -32,11 +32,13 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
     //Get User and Vision Board Data
     var getUser = function() {
         var promise = $http.get('/user').then(function(response) {
+            console.log('response from user data req in DF', response.data);
+
             if(response.data) {
                 userData = response.data;
                 id = response.data._id;
             } else {
-                $window.location.href = '/index.html';
+                //$window.location.href = '/index.html';
             }
         });
         return promise;

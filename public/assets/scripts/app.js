@@ -34,4 +34,9 @@ myApp.controller('UserController', ['$scope', 'DataFactory', '$http',  function(
         });
     }
 
+    //$scope.reroute = function() {
+    //    console.log('in new user controller');
+    //    $window.location = 'user.html#/edit';
+    //};
+
 }]);
