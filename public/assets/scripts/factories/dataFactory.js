@@ -38,7 +38,7 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
                 userData = response.data;
                 id = response.data._id;
             } else {
-                //$window.location.href = '/index.html';
+                $window.location.href = '/index.html';
             }
         });
         return promise;

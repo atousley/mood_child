@@ -10,7 +10,7 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', '$location
 
         if ($scope.userData.visionboard.length === 0) {
             console.log("hits the new user if statement");
-            //alert("It's your first board!!! Go to town!!");
+            alert("It's your first board!!! Go to town!!");
             //write in an iframe here, alerts are lame!
         }
         else {
