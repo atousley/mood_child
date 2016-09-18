@@ -30,6 +30,8 @@ myApp.factory('DataFactory', ['$http', '$window', function($http, $window) {
     };
 
     //Get User and Vision Board Data
+
+    //make sure this doesn't run until the data is saved - it's also running too many times.
     var getUser = function() {
         var promise = $http.get('/user').then(function(response) {
             console.log('response from user data req in DF', response.data);
