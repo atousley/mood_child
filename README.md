@@ -56,7 +56,7 @@ board for a specific month and year.
 
 
 //Additional Considerations and Goals for this project post-presentation:
-- Log-out
+- Log-out (completed Sept 2016)
 - Error handling for wrong user name and password AND password reset
 - Dynamically adding (up to a certain number) all field entries
 - Hosting on Heroku
