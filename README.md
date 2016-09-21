@@ -62,4 +62,4 @@ board for a specific month and year.
 - Hosting on Heroku
 - Allowing users to choose which sections appear on their board
 - Allowing users to choose themes and photos to customize their board
-- Export to PDF feature.
+- Export to PDF feature
