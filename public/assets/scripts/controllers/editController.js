@@ -3,6 +3,7 @@ myApp.controller('EditController', ['$scope', 'DataFactory', '$http', '$location
 
     $scope.dataFactory = DataFactory;
 
+    //Find a way to stop this from running before it should for new users.    
     $scope.dataFactory.retrieveUser().then(function() {
 
         $scope.userData = $scope.dataFactory.userInfo();
