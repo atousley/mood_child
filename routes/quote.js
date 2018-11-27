@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var forismatic = require('forismatic-node')();
+var forismatic = require('../node_modules/forismatic-node')();
 
 router.get('/' , function(req, res) {
     forismatic.getQuote(function (error, quote) {
